@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site Bloqueado</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    .blocker {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      z-index: 999999;
+    }
+    
+    h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    
+    p {
+      font-size: 1.5rem;
+      max-width: 600px;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+    
+    .message {
+      background: rgba(255, 255, 255, 0.2);
+      padding: 2rem;
+      border-radius: 10px;
+      backdrop-filter: blur(5px);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .emoji {
+      font-size: 5rem;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="blocker">
+    <div class="message">
+      <div class="emoji">⏰</div>
+      <h1>Não procrastine!</h1>
+      <p>Falta pouco para você terminar seus projetos e construir um futuro melhor.</p>
+      <p>Este site está bloqueado durante seu horário de produtividade.</p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+{
+    "manifest_version": 3,
+    "name": "Bloqueador de Sites Produtivo",
+    "version": "2.0",
+    "description": "Bloqueia sites que causam distração em horários específicos para aumentar a produtividade.",
+    "permissions": [
+        "declarativeNetRequest",
+        "declarativeNetRequestWithHostAccess",
+        "storage",
+        "webNavigation",
+        "alarms"
+    ],
+    "host_permissions": [
+        "<all_urls>"
+    ],
+    "background": {
+        "service_worker": "service_worker.js"
+    },
+    "declarative_net_request": {
+        "rule_resources": [
+            {
+                "id": "blocked_sites",
+                "enabled": true,
+                "path": "rules.json"
+            }
+        ]
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "images/icon16.png",
+            "48": "images/icon48.png",
+            "128": "images/icon128.png"
+        },
+        "default_title": "Bloqueador Produtivo"
+    },
+    "icons": {
+        "16": "images/icon16.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
+    }
+}

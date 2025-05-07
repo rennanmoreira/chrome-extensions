@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Histórico de URLs Bloqueadas</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 10px;
+        width: 300px;
+      }
+      ul {
+        padding-left: 20px;
+      }
+      li {
+        word-break: break-word;
+        margin-bottom: 5px;
+      }
+      label {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+      }
+      input[type="checkbox"] {
+        margin-right: 10px;
+      }
+      button {
+        margin-top: 15px;
+        padding: 6px 10px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <label>
+      <input type="checkbox" id="recordAllToggle" />
+      Registrar todas as URLs navegadas
+    </label>
+
+    <button id="clearBtn">Limpar histórico</button>
+
+    <h3>Histórico de URLs:</h3>
+    <ul id="urlList">
+      <li>Nenhuma URL ainda.</li>
+    </ul>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

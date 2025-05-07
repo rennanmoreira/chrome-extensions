@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Configurar Bloqueio</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      width: 400px;
+      padding: 16px;
+      color: #333;
+    }
+    
+    h1 {
+      font-size: 1.5rem;
+      margin-bottom: 16px;
+      color: #1a73e8;
+    }
+    
+    h2 {
+      font-size: 1.2rem;
+      margin: 20px 0 10px;
+      color: #1a73e8;
+    }
+    
+    .input-group {
+      display: flex;
+      margin-bottom: 12px;
+    }
+    
+    input[type="text"] {
+      flex: 1;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px 0 0 4px;
+      font-size: 14px;
+    }
+    
+    button {
+      background-color: #1a73e8;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background-color 0.2s;
+    }
+    
+    button:hover {
+      background-color: #0d62c9;
+    }
+    
+    button.add {
+      border-radius: 0 4px 4px 0;
+    }
+    
+    button.remove {
+      background-color: #e53935;
+      margin-left: 8px;
+      border-radius: 4px;
+      padding: 4px 8px;
+    }
+    
+    button.remove:hover {
+      background-color: #c62828;
+    }
+    
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .day-schedule {
+      margin-bottom: 16px;
+      padding: 12px;
+      border: 1px solid #eee;
+      border-radius: 4px;
+      background-color: #f9f9f9;
+    }
+    
+    .day-header {
+      font-weight: bold;
+      margin-bottom: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .time-slots {
+      margin-top: 8px;
+    }
+    
+    .time-slot {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+    
+    .time-input {
+      width: 100px;
+      padding: 6px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-right: 8px;
+    }
+    
+    .save-btn {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      margin-top: 16px;
+      font-size: 16px;
+    }
+    
+    .save-btn:hover {
+      background-color: #388e3c;
+    }
+    
+    .status {
+      margin-top: 16px;
+      padding: 8px;
+      border-radius: 4px;
+      text-align: center;
+      display: none;
+    }
+    
+    .success {
+      background-color: #e8f5e9;
+      color: #388e3c;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <h1>Bloqueador de Procrastinação</h1>
+  
+  <!-- Seção de sites bloqueados -->
+  <h2>Sites a bloquear</h2>
+  <div class="input-group">
+    <input type="text" id="site-input" placeholder="Ex: facebook.com, instagram.com">
+    <button id="add-site" class="add">Adicionar</button>
+  </div>
+  <ul id="sites-list"></ul>
+  
+  <!-- Seção de horários por dia da semana -->
+  <h2>Horários de bloqueio</h2>
+  <div id="schedule-container">
+    <!-- Dias da semana serão inseridos aqui via JavaScript -->
+  </div>
+  
+  <button id="save-config" class="save-btn">Salvar configuração</button>
+  <div id="status" class="status"></div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
